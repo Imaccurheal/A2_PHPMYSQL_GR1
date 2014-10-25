@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ parent() }} - MY Contact
+{% endblock %}
+
+{% block content %}
+    <h1>Contact</h1>
+    {% if var_missing_credential is defined and true %}
+        <div class="alert alert-warning fade in" role="alert">
+            <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+            <strong>Warning!</strong> At least one field is empty, all fields are required.
+        </div>
+    {% endif %}
+
+    {% if var_send_successfully is defined and true %}
+        <div class="alert alert-success fade in" role="alert">
+            <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+            <strong>Success!</strong> Information successfully send to the webmaster.
+        </div>
+    {% endif %}
+
+    {% if var_send_error is defined and true %}
+        <div class="alert alert-danger fade in" role="alert">
+            <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+            <strong>Error!</strong> Error with mail() function, the website is probably on localhost.
+        </div>
+    {% endif %}
+
+    <form id="contactForm" role="form" method="post">
+        <label for="name">Name: </label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
+
+        <label for="email">Email: </label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+
+        <label for="message">Message: </label>
+        <textarea name="message" class="form-control" id="message" cols="30" rows="10" required placeholder="Message"></textarea>
+
+        <button type="submit" class="btn btn-default" name="contactSubmit">Contact webmaster</button>
+    </form>
+{% endblock %}

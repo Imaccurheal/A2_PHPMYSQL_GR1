@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ parent() }} - MY Tags
+{% endblock %}
+
+{% block content %}
+    {% for tag in var_tags %}
+        <div class="row">
+            <article class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                <h1><a class="label label-primary" href="/tag.php?id={{ tag.id }}">{{ tag.name }}</a></h1>
+            </article>
+        </div>
+    {% endfor %}
+{% endblock %}
