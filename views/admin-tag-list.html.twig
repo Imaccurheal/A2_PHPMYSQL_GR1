@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ parent() }} - MY Admin Tags
+{% endblock %}
+
+{% block content %}
+    <h1>Administration: List Tags <a class="btn btn-primary" href="/MY_TWIG_PROJECT/admin-tag-add.php">Add <span class="glyphicon glyphicon-plus-sign"></span></a></h1>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        {% for tag in var_tags %}
+            <tr>
+                <td><a href="/MY_TWIG_PROJECT/article.php?id={{ tag.id }}" target="_blank">{{ tag.id }}</a></td>
+                <td><?php echo getExcerpt($tag['name'], 30);?></td>
+                <td><a href="/MY_TWIG_PROJECT/admin-tag-edit.php?id={{ tag.id }}">Edit</a></td>
+                <td><a href="/MY_TWIG_PROJECT/admin-tag-delete.php?id={{ tag.id }}">Delete</a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

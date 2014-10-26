@@ -43,21 +43,21 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Administration <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li class="dropdown-header">Articles</li>
-                        <li><a href="{{ admin-article-list }}"><span class="glyphicon glyphicon-list-alt"></span> List Articles</a></li>
-                        <li><a href="{{ admin-article-add }}"><span class="glyphicon glyphicon-plus-sign"></span> Add Article</a></li>
+                        <li><a href="/MY_TWIG_PROJECT/admin-article-list.php"><span class="glyphicon glyphicon-list-alt"></span> List Articles</a></li>
+                        <li><a href="/MY_TWIG_PROJECT/admin-article-add.php"><span class="glyphicon glyphicon-plus-sign"></span> Add Article</a></li>
                         <li class="divider"></li>
                         {% if role == 'ROLE_ADMIN' %}
                         <li class="dropdown-header">Categories</li>
-                        <li><a href="{{ admin-category-list }}"><span class="glyphicon glyphicon-list-alt"></span> List Categories</a></li>
-                        <li><a href="{{ admin-category-add }}"><span class="glyphicon glyphicon-plus-sign"></span> Add Category</a></li>
+                        <li><a href="/MY_TWIG_PROJECT/admin-category-list.php"><span class="glyphicon glyphicon-list-alt"></span> List Categories</a></li>
+                        <li><a href="/MY_TWIG_PROJECT/admin-category-add.php"><span class="glyphicon glyphicon-plus-sign"></span> Add Category</a></li>
                         <li class="divider"></li>
                         <li class="dropdown-header">Tags</li>
-                        <li><a href="{{ admin-tag-list }}"><span class="glyphicon glyphicon-list-alt"></span> List Tags</a></li>
-                        <li><a href="{{ admin-tag-add }}"><span class="glyphicon glyphicon-plus-sign"></span> Add Tag</a></li>
+                        <li><a href="/MY_TWIG_PROJECT/admin-tag-list.php"><span class="glyphicon glyphicon-list-alt"></span> List Tags</a></li>
+                        <li><a href="/MY_TWIG_PROJECT/admin-tag-add.php"><span class="glyphicon glyphicon-plus-sign"></span> Add Tag</a></li>
                         <li class="divider"></li>
                         <li class="dropdown-header">Users</li>
-                        <li><a href="{{ admin-user-list }}"><span class="glyphicon glyphicon-list-alt"></span> List Users</a></li>
-                        <li><a href="{{ admin-user-add }}"><span class="glyphicon glyphicon-plus-sign"></span> Add User</a></li>
+                        <li><a href="/MY_TWIG_PROJECT/admin-user-list.php"><span class="glyphicon glyphicon-list-alt"></span> List Users</a></li>
+                        <li><a href="/MY_TWIG_PROJECT/admin-user-add.php"><span class="glyphicon glyphicon-plus-sign"></span> Add User</a></li>
                         {% endif %}
                     </ul>
                 </li>

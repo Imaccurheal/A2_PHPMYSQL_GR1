@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ parent() }} - MY Admin Category
+{% endblock %}
+
+{% block content %}
+    <h1>Administration: List Categories <a class="btn btn-primary" href="/MY_TWIG_PROJECT/admin-category-add.php">Add <span class="glyphicon glyphicon-plus-sign"></span></a></h1>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Image</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        {% for category in var_categories %}
+            <tr>
+                <td><a href="/MY_TWIG_PROJECT/article.php?id={{ category.id }}" target="_blank">{{ category.id }}</a></td>
+                <td>{{ category.name }}</td>
+                <td><img src="{{ category.image }}" alt="{{ category.name }}" width="50" height="35"></td>
+                <td><a href="/MY_TWIG_PROJECT/admin-category-edit.php?id={{ category.id }}">Edit</a></td>
+                <td><a href="/MY_TWIG_PROJECT/admin-category-delete.php?id={{ category.id }}">Delete</a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
