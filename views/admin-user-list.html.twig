@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block content %}
-    <h1>Administration: List Users <a class="btn btn-primary" href="/MY_TWIG_PROJECT/admin-user-add.php">Add <span class="glyphicon glyphicon-plus-sign"></span></a></h1>
+    <h1>Administration: List Users <a class="btn btn-primary" href="/A2_PHPMYSQL_GR1/admin-user-add.php">Add <span class="glyphicon glyphicon-plus-sign"></span></a></h1>
 
     <table class="table">
         <thead>
@@ -21,11 +21,11 @@
 
         {% for user in var_users %}
             <tr>
-                <td><a href="/MY_TWIG_PROJECT/article.php?id={{ user.id }}" target="_blank">{{ user.id }}</a></td>
+                <td><a href="/A2_PHPMYSQL_GR1/article.php?id={{ user.id }}" target="_blank">{{ user.id }}</a></td>
                 <td>{{ user.username }}</td>
                 <td>{% if role is defined and true %}<span class="label label-primary">Admin</span>{% else %}<span class="label label-default">Default</span>{% endif %}</td>
-                <td><a href="/MY_TWIG_PROJECT/admin-user-edit.php?id={{ user.id }}">Edit</a></td>
-                <td><a href="/MY_TWIG_PROJECT/admin-user-delete.php?id={{ user.id }}">Delete</a></td>
+                <td><a href="/A2_PHPMYSQL_GR1/admin-user-edit.php?id={{ user.id }}">Edit</a></td>
+                <td><a href="/A2_PHPMYSQL_GR1/admin-user-delete.php?id={{ user.id }}">Delete</a></td>
             </tr>
         {% endfor %}
         </tbody>

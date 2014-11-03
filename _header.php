@@ -12,7 +12,7 @@ include __DIR__.'/functions/category.fn.php';
 include __DIR__.'/functions/tag.fn.php';
 $config = include __DIR__.'/config/config.php';
 
-define('ROOT', '/MY_TWIG_PROJECT/');
+define('ROOT', '/A2_PHPMYSQL_GR1/');
 
 $link = getDatabaseLink($config['database']);
 

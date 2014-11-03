@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block content %}
-    <h1>Administration: List Categories <a class="btn btn-primary" href="/MY_TWIG_PROJECT/admin-category-add.php">Add <span class="glyphicon glyphicon-plus-sign"></span></a></h1>
+    <h1>Administration: List Categories <a class="btn btn-primary" href="/A2_PHPMYSQL_GR1/admin-category-add.php">Add <span class="glyphicon glyphicon-plus-sign"></span></a></h1>
 
     <table class="table">
         <thead>
@@ -21,11 +21,11 @@
 
         {% for category in var_categories %}
             <tr>
-                <td><a href="/MY_TWIG_PROJECT/article.php?id={{ category.id }}" target="_blank">{{ category.id }}</a></td>
+                <td><a href="/A2_PHPMYSQL_GR1/article.php?id={{ category.id }}" target="_blank">{{ category.id }}</a></td>
                 <td>{{ category.name }}</td>
                 <td><img src="{{ category.image }}" alt="{{ category.name }}" width="50" height="35"></td>
-                <td><a href="/MY_TWIG_PROJECT/admin-category-edit.php?id={{ category.id }}">Edit</a></td>
-                <td><a href="/MY_TWIG_PROJECT/admin-category-delete.php?id={{ category.id }}">Delete</a></td>
+                <td><a href="/A2_PHPMYSQL_GR1/admin-category-edit.php?id={{ category.id }}">Edit</a></td>
+                <td><a href="/A2_PHPMYSQL_GR1/admin-category-delete.php?id={{ category.id }}">Delete</a></td>
             </tr>
         {% endfor %}
         </tbody>
